@@ -1,0 +1,44 @@
+{
+  "name": "infosistemas-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --ignore-watch --no-notify src/index.ts",
+    "start": "node dist/index.js",
+    "test": "mocha -r ts-node/register 'src/tests/**/*.ts' --timeout 10000",
+    "entity:create": "ts-node ./node_modules/typeorm/cli.js entity:create -n",
+    "migrate:create": "ts-node ./node_modules/typeorm/cli.js migration:create -n",
+    "migrate:generate": "ts-node ./node_modules/typeorm/cli.js migration:generate -n",
+    "migrate:up": "ts-node ./node_modules/typeorm/cli.js migration:run",
+    "migrate:down": "ts-node ./node_modules/typeorm/cli.js migration:revert",
+    "schema:drop": "ts-node ./node_modules/typeorm/cli.js schema:drop",
+    "schema:sync": "ts-node ./node_modules/typeorm/cli.js schema:sync"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/chai-json-schema": "^1.4.6",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "^17.0.23",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "chai-json-schema": "^1.5.1",
+    "mocha": "^9.2.2",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "better-sqlite3": "^7.5.1",
+    "class-validator": "^0.13.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.39"
+  }
+}

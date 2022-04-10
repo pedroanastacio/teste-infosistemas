@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: backend
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+
+
+
+
+    # docker-compose -p pedroanastacio_infosistemas up -d
